@@ -14,6 +14,10 @@ You can use URL rewriter to protect your entire app from cross site attack, simp
 
 To use with real web servers, use php.ini's "auto_prepend_file" setting or include site_protect.php from your entry point script. A few configuration parameters can be used, refer to site_protect.php for details.
 
+## JavaScript Note
+
+If you have JavaScirpt in your pages, you should get token from query string and append it to all URL links. Do not make API to get the token, instead you must get token value from query string. i.e. GET
+
 ## How it works?
 
  - Create request validation token from session ID. (i.e. sha1(session_id())
